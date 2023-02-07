@@ -21,7 +21,7 @@ class EmployeeDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityEmployeeDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        //Extract employee's username from Intent
         employee = intent.getStringExtra(EMPLOYEE_NAME).toString()
 
         binding.employeeName.setText(employee)
@@ -30,17 +30,19 @@ class EmployeeDetails : AppCompatActivity() {
         var netIncome: Double = 0.0
         var tax: Double = 0.00
 
+        // Set Event Listener to the Calculate button
         binding.calculateButton.setOnClickListener{
 
             val salary = binding.salary.text.toString().trim()
-//            Toast.makeText(this, salary, Toast.LENGTH_SHORT)
             val taxRate = binding.taxRate.text.toString().trim()
 
+            //Validate if salary or tax rate are empty. If true, return required field message
             if(salary.isEmpty() || taxRate.isEmpty()){
                 binding.salary.error = "This field is required"
                 binding.taxRate.error = "This field is required"
             }
 
+            //If salary and tax rate are populated, make conversion to double and necessary adjusts and perform netIncome calculation
             try {
                 income = salary.toDouble()
             }catch (e: java.lang.NumberFormatException) {
