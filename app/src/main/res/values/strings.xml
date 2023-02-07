@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BrunoMorgado_COMP304Section002_Lab01_Ex01</string>
+    <string name="header">LOGIN DETAILS</string>
+    <string name="name_hint">User Name</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="employee_header">EMPLOYEE DETAILS</string>
+    <string name="username">User name displayed from Login Details Activity</string>
+    <string name="yearly_salary">Enter Yearly Salary</string>
+    <string name="tax_rate">Enter tax rate as an integer</string>
+    <string name="calculate_button">CALCULATE</string>
+    <string name="output_box">Net salary after tax deduction here</string>
+</resources>
